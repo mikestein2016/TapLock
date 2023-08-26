@@ -4036,15 +4036,16 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.SetAngle,
 		C3.Plugins.Sprite.Acts.SetAnimFrame,
 		C3.Plugins.Sprite.Acts.SetAnim,
+		C3.Plugins.System.Acts.SetVar,
+		C3.Plugins.Sprite.Exps.AnimationName,
 		C3.Plugins.Audio.Acts.StopAll,
 		C3.Plugins.Audio.Acts.PlayByName,
 		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.Plugins.Touch.Cnds.OnTouchObject,
-		C3.Plugins.System.Acts.SetVar,
 		C3.Plugins.Sprite.Exps.AnimationFrame,
 		C3.Plugins.Sprite.Exps.X,
 		C3.Plugins.Sprite.Exps.Y,
-		C3.Plugins.Sprite.Cnds.IsAnimPlaying,
+		C3.Plugins.System.Cnds.Compare,
 		C3.Plugins.Sprite.Cnds.CompareFrame,
 		C3.Plugins.Sprite.Cnds.CompareX,
 		C3.Plugins.Sprite.Cnds.CompareY,
@@ -4065,9 +4066,6 @@ self.C3_JsPropNameTable = [
 	{PrevPosY: 0},
 	{PrevFace: 0},
 	{PrevColor: 0},
-	{CurPosX: 0},
-	{CurPosY: 0},
-	{CurFace: 0},
 	{BGColor: 0}
 ];
 }
@@ -4192,18 +4190,18 @@ self.C3_ExpressionFuncs = [
 			return () => f0("LB", "B", "LP", "P", "LU", "U", "LG", "G", "LO", "L", "LR", "R");
 		},
 		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66");
-		},
-		() => "Sound",
-		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => v0.GetValue();
 		},
 		p => {
 			const n0 = p._GetNode(0);
 			return () => n0.ExpObject();
-		}
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66");
+		},
+		() => "Sound"
 ];
 
 
