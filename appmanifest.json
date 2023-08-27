@@ -4,7 +4,7 @@
 	"description": "Let your toddlers use your phone without worrying about them sending messages or spending money.",
 	"start_url": "index.html",
 	"display": "fullscreen",
-	"orientation": "portrait",
+	"orientation": "landscape",
 	"background_color": "#ffffff",
 	"icons": [
 		{
