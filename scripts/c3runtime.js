@@ -4099,10 +4099,17 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Touch.Cnds.OnTouchStart,
 		C3.Plugins.Browser.Cnds.IsFullscreen,
 		C3.Plugins.Browser.Acts.RequestFullScreen,
+		C3.Plugins.Browser.Cnds.OnBackButton,
+		C3.Plugins.System.Acts.GoToLayout,
 		C3.Behaviors.Rotate.Acts.SetEnabled,
 		C3.Plugins.Touch.Cnds.OnTouchObject,
-		C3.Plugins.System.Acts.GoToLayout,
-		C3.Behaviors.Rotate.Acts.SetSpeed
+		C3.Behaviors.Rotate.Acts.SetSpeed,
+		C3.Plugins.Sprite.Acts.SetX,
+		C3.Plugins.Audio.Acts.Play,
+		C3.Plugins.Text.Acts.SetText,
+		C3.Plugins.Text.Acts.SetPos,
+		C3.Plugins.Text.Acts.SetFontColor,
+		C3.Plugins.System.Cnds.Else
 	];
 };
 self.C3_JsPropNameTable = [
@@ -4118,12 +4125,12 @@ self.C3_JsPropNameTable = [
 	{Colors: 0},
 	{Objects: 0},
 	{SpeechSynthesis: 0},
+	{ColorText: 0},
 	{FacePrevPosX: 0},
 	{FacePrevPosY: 0},
 	{FacePrevFace: 0},
 	{BGPrevColor: 0},
 	{BGColor: 0},
-	{CurrentAnimalName: 0},
 	{CurrentAnimal: 0},
 	{AnimalPrevPosX: 0},
 	{AnimalPrevPosY: 0},
@@ -4278,6 +4285,21 @@ self.C3_ExpressionFuncs = [
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15);
 		},
+		() => 1,
+		() => 2,
+		() => 3,
+		() => 4,
+		() => 5,
+		() => 6,
+		() => 7,
+		() => 8,
+		() => 9,
+		() => 10,
+		() => 11,
+		() => 12,
+		() => 13,
+		() => 14,
+		() => 15,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83);
@@ -4286,7 +4308,18 @@ self.C3_ExpressionFuncs = [
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0("Red", "Yellow", "Blue", "Green", "Gray", "Brown", "White", "Black", "Purple", "Pink", "Orange");
-		}
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0(150, 250, 350, 450, 550, 650);
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0(100, 200, 300, 400);
+		},
+		() => "Black",
+		() => -717750023016447,
+		() => -1023
 ];
 
 
