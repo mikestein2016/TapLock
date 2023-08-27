@@ -4101,6 +4101,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Browser.Acts.RequestFullScreen,
 		C3.Plugins.Browser.Cnds.OnBackButton,
 		C3.Plugins.System.Acts.GoToLayout,
+		C3.Plugins.Touch.Cnds.OnDoubleTapGesture,
 		C3.Behaviors.Rotate.Acts.SetEnabled,
 		C3.Plugins.Touch.Cnds.OnTouchObject,
 		C3.Behaviors.Rotate.Acts.SetSpeed,
